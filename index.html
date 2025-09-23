@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Azienda Agricola Riccio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Azienda Agricola Riccio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content container">
+            <h1>Azienda Agricola Riccio</h1>
+            <p class="subtitle">La Passione di una Famiglia, la Qualità in Ogni Filo di Fieno</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="benvenuto" class="section-padded bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Benvenuti nella Nostra Famiglia</h2>
+                <p class="section-description">Dal cuore delle nostre terre, produciamo fieno di eccellenza, con cura e rispetto per la natura. Siamo la tua scelta per la qualità, la freschezza e la genuinità.</p>
+                
+                <div class="intro-grid">
+                    <div class="intro-card reveal">
+                        <img src="https://images.unsplash.com/photo-1549776999-555e7178c75b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjMyMzh8MHwxfHNlYXJjaHw0OHx8aGF5JTIwZmllbGR8ZW58MHx8fHwxNzA4ODg2NjY1fDA&ixlib=rb-4.0.3&q=80&w=1920" alt="I Nostri Campi">
+                        <h3>I Nostri Campi</h3>
+                        <p>Il fieno nasce in un ambiente incontaminato, seguendo i ritmi della natura. </p>
+                    </div>
+                    <div class="intro-card reveal">
+                        <img src="https://images.unsplash.com/photo-1605634685350-f8d2274b7e41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjMyMzh8MHwxfHNlYXJjaHwyMHx8aGF5fGVufDB8fHx8MTcwODg3OTg0Mnww&ixlib=rb-4.0.3&q=80&w=1080" alt="I Nostri Prodotti">
+                        <h3>I Nostri Prodotti</h3>
+                        <p>Offriamo diverse varietà di fieno, ognuna con caratteristiche uniche per le esigenze dei tuoi animali.</p>
+                    </div>
+                    <div class="intro-card reveal">
+                        <img src="https://images.unsplash.com/photo-1594903337963-c735d4617a23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjMyMzh8MHwxfHNlYXJjaHw3fHxtYW4lMjB0cmFjdG9yJTIwZmFybXxlbnwwfHx8fDE3MDg4ODc0MTF8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="La Nostra Storia">
+                        <h3>La Nostra Storia</h3>
+                        <p>Da generazioni, mettiamo la nostra passione e la nostra esperienza in ogni singolo filo di fieno.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Azienda Agricola Riccio. Tutti i diritti riservati.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.3 });
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+</body>
+</html>

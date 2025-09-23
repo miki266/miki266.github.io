@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Azienda Agricola Riccio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Azienda Agricola Riccio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Chi Siamo</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="storia" class="section-padded">
+            <div class="container">
+                <div class="story-content">
+                    <img src="fondatore.png" alt="Storia dell'Azienda" class="story-image reveal">
+                    <div class="story-text">
+                        <h2 class="section-title text-left">La Nostra Storia, dal 1977</h2>
+                        <p class="story-description">il fondatore si chiamava leonardo riccio ora defunto. l'azienda attualmente e' mantenuta dal figlio michele riccio.</p>
+                        <ul class="timeline">
+                            <li class="reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>1977</h4>
+                                    <p>La famiglia Riccio inizia la sua avventura agricola con i primi campi di fieno.</p>
+                                </div>
+                            </li>
+                            <li class="reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>2005</h4>
+                                    <p>Introduzione di nuove tecniche agricole sostenibili per migliorare la qualità del fieno.</p>
+                                </div>
+                            </li>
+                            <li class="reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Oggi</h4>
+                                    <p>L'azienda diventa un punto di riferimento per fieno di alta qualità in tutta la regione.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 Azienda Agricola Riccio. Tutti i diritti riservati.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.3 });
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+</body>
+</html>
